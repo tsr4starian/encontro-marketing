@@ -466,6 +466,23 @@
   .hero-board-footer{flex-wrap:wrap}
 }
 
+
+/* ===== Ajustes v10: Lumma + dinâmica das apresentações ===== */
+.lumma-client .client-detail-head em{
+  background:#e7f7f1;
+  color:#00775f;
+  border-color:rgba(0,119,95,.12);
+}
+.client-detail-grid.lumma-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.client-detail-grid.lumma-grid > div{
+  min-height:94px;
+}
+@media(max-width:760px){
+  .client-detail-grid.lumma-grid{grid-template-columns:1fr}
+}
+
 </style>
 <style>
 /* Refinamentos finais da convocação */
@@ -523,8 +540,8 @@
       <div class="hero-team-tag">Seleção Azul</div>
       <div class="hero-client-copy">
         <small>CLIENTE 01</small>
-        <strong>Construtora Horizonte Sul</strong>
-        <span>Florianópolis · SC</span>
+        <strong>Lumma Construtora</strong>
+        <span>Ingleses do Rio Vermelho · Florianópolis/SC</span>
       </div>
       <div class="hero-arrow">↗</div>
     </article>
@@ -662,14 +679,15 @@
 <div class="support-title"><span>Acompanhamento do comitê</span><small>Pessoas que acompanham a seleção durante a dinâmica</small></div>
 <div class="support-grid"><div class="support-person"><img alt="Foto de Ricardo Pugsley Nacarato" class="support-photo" src="data:image/webp;base64,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"/><div><strong>Ricardo Pugsley Nacarato</strong><span>Comitê</span></div></div></div>
 </div>
-<div class="client-detail-box">
-<div class="client-detail-head"><div><span>Cliente da missão</span><strong>Construtora Horizonte Sul</strong></div><em>Simulação</em></div>
-<div class="client-detail-grid">
-<div><small>Endereço</small><b>Av. das Araucárias, 850 · Saco Grande · Florianópolis/SC</b></div>
-<div><small>Ponto de encontro</small><b>Saída do Sapiens às 7h30</b></div>
-<div><small>Transporte</small><b>Van da seleção</b></div>
+<div class="client-detail-box lumma-client">
+<div class="client-detail-head"><div><span>Cliente da missão</span><strong>Lumma Construtora</strong></div><em>Confirmado</em></div>
+<div class="client-detail-grid lumma-grid">
+<div><small>Encontro</small><b>8h · Lumma Multiplace</b></div>
+<div><small>1ª parada · Obra</small><b>Rodovia Armando Calil Bulos, 5230 · Ingleses do Rio Vermelho · Florianópolis/SC</b></div>
+<div><small>2ª parada · Escritório</small><b>Estrada Dom João Becker, 1988 · Ingleses do Rio Vermelho · Florianópolis/SC</b></div>
+<div><small>Dinâmica</small><b>Visita à obra seguida da ida ao escritório da Lumma Construtora</b></div>
 </div>
-<p>Dados ilustrativos para simulação do layout</p>
+<p>A seleção se encontra diretamente na obra às 8h e, após a primeira etapa da visita, segue para o escritório.</p>
 </div>
 </div>
 </article>
@@ -853,22 +871,22 @@
 <div class="day-title"><b>01</b><div><span>1º de setembro</span><h3>Acolher e colocar todo mundo em linha</h3></div></div>
 <div class="agenda-list">
 <div class="agenda-row"><time>8h–9h30</time><div><strong>Recepção das Stars</strong><p>Um primeiro momento para acolher o time, promover reencontros e abrir a experiência de forma leve antes do início da programação.</p></div></div>
-<div class="agenda-row"><time>9h30–11h30</time><div><strong>Apresentação das lideranças de Marketing</strong><p>Abertura do encontro com as lideranças para compartilhar o momento do time, prioridades, aprendizados recentes e direcionamentos que ajudam a colocar todo mundo em linha antes de entrar em campo.</p></div></div>
-<div class="agenda-row"><time>11h30–12h15</time><div><strong>Meditação e descompressão</strong><p>Uma pausa para desacelerar, mudar o ritmo depois da manhã de conteúdo e criar uma transição mais leve para a sequência do encontro.</p></div></div>
-<div class="agenda-row"><time>12h15–14h</time><div><strong>Almoço no Sapiens</strong><p>Momento reservado para almoço e convivência entre as Stars antes da retomada das atividades individuais.</p></div></div>
+<div class="agenda-row"><time>9h30–11h</time><div><strong>Apresentação das lideranças de Marketing</strong><p>Abertura do encontro com as lideranças para compartilhar o momento do time, prioridades, aprendizados recentes e direcionamentos que ajudam a colocar todo mundo em linha antes de entrar em campo.</p></div></div>
+<div class="agenda-row"><time>11h–12h</time><div><strong>Meditação e descompressão</strong><p>Uma pausa para desacelerar, mudar o ritmo depois da manhã de conteúdo e criar uma transição mais leve para a sequência do encontro.</p></div></div>
+<div class="agenda-row"><time>12h–14h</time><div><strong>Almoço no Sapiens</strong><p>Momento reservado para almoço e convivência entre as Stars antes da retomada das atividades individuais.</p></div></div>
 <div class="agenda-row"><time>14h+</time><div><strong>Tarde livre para trabalho</strong><p>Sem programação obrigatória, preservando espaço para demandas individuais e rotina profissional.</p></div></div>
 </div>
 </article>
 <article class="day-card dark-day">
 <div class="day-title"><b>02</b><div><span>2 de setembro</span><h3>Cliente, aprendizado e desenvolvimento</h3></div></div>
 <div class="agenda-list">
-<div class="agenda-row"><time>8h–11h</time><div><strong>Visita às obras</strong><p>As seleções entram em campo para observar a operação, conversar com os clientes e validar as hipóteses preparadas previamente.</p></div></div>
+<div class="agenda-row"><time>8h–11h</time><div><strong>Visitas aos clientes</strong><p>As seleções entram em campo para observar a operação, conversar com os clientes e validar as hipóteses preparadas previamente. A jornada pode incluir obra, escritório ou outros espaços relevantes de cada operação.</p></div></div>
 <div class="agenda-row"><time>11h–12h30</time><div><strong>Consolidação do material</strong><p>Organização dos registros, seleção dos aprendizados e produção da apresentação.</p></div></div>
 <div class="agenda-row"><time>12h30–14h</time><div><strong>Almoço no Ático</strong><p>Um almoço preparado especialmente para as Stars, criando um momento de convivência antes das apresentações da tarde.</p></div></div>
-<div class="agenda-row"><time>14h–16h</time><div><strong>Apresentações das seleções</strong><p>Compartilhamento das visitas e das principais implicações para Marketing.</p></div></div>
+<div class="agenda-row"><time>14h–16h</time><div><strong>Apresentações das seleções</strong><p>Cada seleção terá 15 minutos para apresentar os principais aprendizados da visita. Na sequência, o tempo restante será dedicado à discussão conjunta dos aprendizados, implicações e pontos levantados pelos grupos.</p></div></div>
 <div class="agenda-row"><time>16h–17h</time><div><strong>Conversa sobre carreira com Alejandra Cruz</strong><p>Momento de desenvolvimento profissional após o encerramento do bloco mais intenso da Copa.</p></div></div>
 <div class="agenda-row"><time>17h–18h</time><div><strong>Apresentação do Cris</strong><p>Último conteúdo formal antes do encerramento informal.</p></div></div>
-<div class="agenda-row"><time>18h+</time><div><strong>Happy Hour</strong><p>Comidas de bar, bebidas, karaokê e pebolim.</p></div></div>
+<div class="agenda-row"><time>18h+</time><div><strong>Happy Hour</strong><p>Comidas de bar, bebidas, karaokê, pebolim e jogos de tabuleiro.</p></div></div>
 </div>
 </article>
 </div>
@@ -907,7 +925,7 @@
 <div class="wrap">
 <div class="kicker">Depois da visita</div>
 <h2>Agora é hora de contar o que vocês descobriram</h2>
-<p class="lead">As três seleções seguirão a mesma estrutura para transformar a experiência em uma história simples, útil e fácil de compartilhar.</p>
+<p class="lead">As três seleções seguirão a mesma estrutura para transformar a experiência em uma história simples, útil e fácil de compartilhar. Cada grupo terá 15 minutos para apresentar e, depois, abriremos a conversa para discutir em conjunto os aprendizados e pontos levantados.</p>
 <div class="presentation-grid">
 <article class="p-card"><div class="p-num">01</div><h3>Quem é o cliente</h3><p>Contextualize brevemente a empresa, sua operação e o cenário da visita.</p></article>
 <article class="p-card"><div class="p-num">02</div><h3>O que fomos entender</h3><p>Retome as principais perguntas ou hipóteses que orientaram a investigação.</p></article>
